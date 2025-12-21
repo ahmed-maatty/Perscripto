@@ -1,8 +1,73 @@
-*{
-  margin: 0;
+* {
   box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
+
+$Main_Txt_Color: #1f2937;
+$Logo_Txt_Color: #000b6d;
 
 ul {
   list-style: none;
+}
+
+.txt_main_colo {
+  color: $Main_Txt_Color;
+}
+
+.logo_txt_color {
+  color: $Logo_Txt_Color;
+}
+
+nav {
+  border-bottom: 2px solid #adadad;
+  background-color: white;
+  .nav_auth_btn {
+    border-radius: 25px;
+    background-color: #5f6fff;
+    color: white;
+  }
+
+  a {
+    position: relative;
+    &.active {
+      color: $Logo_Txt_Color;
+      &::after {
+        content: " ";
+        background-color: #5f6fff;
+        border-radius: 10px;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.auth_form {
+  border-radius: 10px;
+  border: 1px solid #adadad;
+  box-shadow: 0px 20px 50px 0px #5f6fff1a;
+  .form_title {
+    color: #4b5563;
+  }
+  button {
+    border-radius: 10px;
+    background-color: #5f6fff;
+    color: white;
+  }
+}
+
+.input_container {
+  label {
+    color: #4b5563;
+  }
+  input {
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 100%;
+    outline: 0;
+  }
 }
