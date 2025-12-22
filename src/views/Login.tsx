@@ -20,6 +20,10 @@ function Login() {
         className="auth_form px-6 py-8 w-1/4"
         onSubmit={submitHandler}
       >
+        <div className="form_title mb-4">
+          <h3 className="mb-1 text-xl font-medium">Login</h3>
+          <p>Please login to book appointment</p>
+        </div>
         <Input
           inputName="email"
           inputPlaceHolder="Enter Your Email"

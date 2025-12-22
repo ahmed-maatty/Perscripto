@@ -17,19 +17,19 @@ function NavBar() {
             home
           </NavLink>
           <NavLink
-            to={"all-doctors"}
+            to={"/all-doctors"}
             className={"capitalize text-lg font-normal txt_main_colo"}
           >
             all doctors
           </NavLink>
           <NavLink
-            to={"about"}
+            to={"/about"}
             className={"capitalize text-lg font-normal txt_main_colo"}
           >
             about
           </NavLink>
           <NavLink
-            to={"contact"}
+            to={"/contact"}
             className={"capitalize text-lg font-normal txt_main_colo"}
           >
             contact
@@ -38,7 +38,7 @@ function NavBar() {
       </div>
       <div>
         <Link
-          to={"auth/register"}
+          to={"/auth/register"}
           className="capitalize py-2 px-4 nav_auth_btn"
         >
           {" "}

@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import Input from "../components/Input";
 import { Link } from "react-router";
+import CreateUser from "../api/CreateUser";
 
 function Register() {
+  
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
+    role : "User"
   });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    CreateUser(formData)
   };
   return (
     <div className="h-screen flex items-center justify-center">
