@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "../components/Input";
+import LoginLogic from "../api/LoginFunc";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ function Login() {
   };
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    LoginLogic(formData);
   };
   return (
     <div className="h-screen flex items-center justify-center">
