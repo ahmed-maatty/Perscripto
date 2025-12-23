@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import Input from "../components/Input";
 import LoginLogic from "../api/LoginFunc";
+import { useDispatch } from "react-redux";
+import { setUser } from "../store/userSlice";
+
+interface userInteface {
+  username: string;
+  role: string;
+  email: string;
+  id: string;
+}
 
 function Login() {
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -10,9 +21,14 @@ function Login() {
   const changeHandle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const submitHandler = (e: React.FormEvent) => {
+  const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
-    LoginLogic(formData);
+    try {
+      const user: userInteface = await LoginLogic(formData);
+      dispatch(setUser(user));
+    } catch (error) {
+      console.log("Error Happend ", error);
+    }
   };
   return (
     <div className="h-screen flex items-center justify-center">

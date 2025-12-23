@@ -11,17 +11,19 @@ export default async function LoginLogic(userData: UserData) {
     const { data, error } = await supaBase.from("Users").select("*").eq("email" , userData.email).single()
     if (error) {
       toast.error("User Not Found!");
-      return null;
+      return {};
     }
     if (!data){
       toast.error("User Not Found");
     }
-    const {username , email , password , role , id} = data;
+    const { username , id , email , role , password } = data;
     if(password !== userData.password) {
-      return toast.error(`Invalid Email Or Password`);
+      toast.error(`Invalid Email Or Password`);
+      return {}
     }
     //Set User In Redux State
-    return console.log({username , email , password , role , id});
+    
+    return {username , id , email , role};
   } catch (error) {
     console.log(error);
   }
