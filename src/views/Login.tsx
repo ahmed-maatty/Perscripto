@@ -4,13 +4,6 @@ import LoginLogic from "../api/LoginFunc";
 import { useDispatch } from "react-redux";
 import { setUser } from "../store/userSlice";
 
-interface userInteface {
-  username: string;
-  role: string;
-  email: string;
-  id: string;
-}
-
 function Login() {
   const dispatch = useDispatch();
 
@@ -24,7 +17,7 @@ function Login() {
   const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const user: userInteface = await LoginLogic(formData);
+      const user = await LoginLogic(formData);
       dispatch(setUser(user));
     } catch (error) {
       console.log("Error Happend ", error);

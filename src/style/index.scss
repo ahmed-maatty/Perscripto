@@ -71,3 +71,84 @@ nav {
     outline: 0;
   }
 }
+
+.dropDown {
+  position: relative;
+  &:hover {
+    .dropDown_Menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .dropDown_Menu {
+    position: absolute;
+    bottom: -55px;
+    background-color: aliceblue;
+    color: $Main_Txt_Color;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    button {
+      width: 100%;
+    }
+  }
+}
+
+footer {
+  background-color: white;
+  padding: 0.5rem 2rem;
+  .footer_data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid #adadad;
+    .footer_desc {
+      width: 40%;
+      .footer_logo {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        h1 {
+          color: #000b6d;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      p {
+        font-size: 18px;
+        color: $Main_Txt_Color;
+        margin-top: 2rem;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+    .footer_links,
+    .footer_contact {
+      align-self: baseline;
+      color: $Main_Txt_Color;
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 2rem;
+        a {
+          color: $Main_Txt_Color;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .copy_write {
+    p {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 18px;
+      color: $Main_Txt_Color;
+      font-weight: 400;
+    }
+  }
+}

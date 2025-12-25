@@ -64,4 +64,83 @@ nav a.active::after {
   padding: 8px 16px;
   width: 100%;
   outline: 0;
+}
+
+.dropDown {
+  position: relative;
+}
+.dropDown:hover .dropDown_Menu {
+  visibility: visible;
+  opacity: 1;
+}
+.dropDown .dropDown_Menu {
+  position: absolute;
+  bottom: -55px;
+  background-color: aliceblue;
+  color: #1f2937;
+  border-radius: 8px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.dropDown .dropDown_Menu button {
+  width: 100%;
+}
+
+footer {
+  background-color: white;
+  padding: 0.5rem 2rem;
+}
+footer .footer_data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+  border-bottom: 2px solid #adadad;
+}
+footer .footer_data .footer_desc {
+  width: 40%;
+}
+footer .footer_data .footer_desc .footer_logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+footer .footer_data .footer_desc .footer_logo h1 {
+  color: #000b6d;
+}
+footer .footer_data .footer_desc .footer_logo img {
+  width: 40px;
+  height: 40px;
+}
+footer .footer_data .footer_desc p {
+  font-size: 18px;
+  color: #1f2937;
+  margin-top: 2rem;
+  font-weight: 400;
+  line-height: 30px;
+}
+footer .footer_data .footer_links,
+footer .footer_data .footer_contact {
+  align-self: baseline;
+  color: #1f2937;
+}
+footer .footer_data .footer_links .links,
+footer .footer_data .footer_contact .links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+footer .footer_data .footer_links .links a,
+footer .footer_data .footer_contact .links a {
+  color: #1f2937;
+  font-size: 18px;
+}
+footer .copy_write p {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 18px;
+  color: #1f2937;
+  font-weight: 400;
 }/*# sourceMappingURL=index.css.map */

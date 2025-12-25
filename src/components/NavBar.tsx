@@ -1,7 +1,15 @@
 import logo from "/assets/logo.png";
 import { Link, NavLink } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "../store/store";
+import { removeUser } from "../store/userSlice";
 
 function NavBar() {
+  const { user } = useSelector((state: RootState) => state.User);
+  const dispatch = useDispatch();
+  const logoutHandler = () => {
+    dispatch(removeUser());
+  };
   return (
     <nav className="flex justify-between items-center sticky top-0 py-4 px-6">
       <div className="nav_logo flex justify-center items-center gap-2">
@@ -37,13 +45,38 @@ function NavBar() {
         </ul>
       </div>
       <div>
-        <Link
-          to={"/auth/register"}
-          className="capitalize py-2 px-4 nav_auth_btn"
-        >
-          {" "}
-          create account
-        </Link>
+        {user ? (
+          <div className="dropDown active">
+            <button className="capitalize text-lg font-normal logo_txt_color cursor-pointer">
+              {user.username}
+            </button>
+            <div className="dropDown_Menu">
+              {user.role === "Admin" && (
+                <>
+                  <button className="dashboard capitalize cursor-pointer py-4 px-8">
+                    dashboard
+                  </button>
+                  <button className="profile capitalize cursor-pointer py-4 px-8">
+                    profile
+                  </button>
+                </>
+              )}
+              <button
+                className="logout capitalize cursor-pointer py-4 px-8"
+                onClick={logoutHandler}
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        ) : (
+          <Link
+            to={"/auth/register"}
+            className="capitalize py-2 px-4 nav_auth_btn"
+          >
+            create account
+          </Link>
+        )}
       </div>
     </nav>
   );
