@@ -7,7 +7,7 @@ function App() {
   return <>
     <RouterProvider router={router} />
     <ToastContainer />
-  </> 
+  </>
 }
 
 export default App;

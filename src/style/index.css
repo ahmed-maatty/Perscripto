@@ -18,6 +18,7 @@ ul {
 nav {
   border-bottom: 2px solid #adadad;
   background-color: white;
+  z-index: 999;
 }
 nav .nav_auth_btn {
   border-radius: 25px;
@@ -143,4 +144,121 @@ footer .copy_write p {
   font-size: 18px;
   color: #1f2937;
   font-weight: 400;
+}
+
+.section_title h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+.section_title p {
+  color: #4b5563;
+  font-size: 18px;
+}
+
+.Home {
+  width: 100%;
+  height: 100%;
+}
+.Home .Hero {
+  height: 80vh;
+  background-color: #5f6fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.Home .Hero .hero_desc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.Home .Hero .hero_desc h1 {
+  font-size: 63px;
+  font-weight: 600;
+  color: white;
+  line-height: 80px;
+}
+.Home .Hero .hero_desc p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: 18px;
+}
+.Home .Hero .hero_desc p img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 130px;
+}
+.Home .Hero .hero_img {
+  width: 50%;
+  align-self: end;
+  position: relative;
+}
+.Home .Hero .hero_img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.Home .Specility {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+  margin-top: 3.5rem;
+}
+.Home .Specility .speciality-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.Home .Specility .speciality-content div img {
+  width: 105px;
+  height: 105px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Home .Specility .speciality-content div p {
+  font-size: 18px;
+  color: #4b5563;
+}
+.Home .BookNow {
+  width: calc(100% - 7rem);
+  height: 43vh;
+  background-color: #5f6fff;
+  margin: 3.5rem auto;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  z-index: 1;
+  position: relative;
+}
+.Home .BookNow .details {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 80px;
+}
+.Home .BookNow .book_image {
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  right: 3rem;
+  bottom: 0;
+}
+.Home .BookNow .book_image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 410px;
 }/*# sourceMappingURL=index.css.map */
