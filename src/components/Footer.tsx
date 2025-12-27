@@ -9,7 +9,7 @@ function Footer() {
         <div className="footer_desc">
           <div className="footer_logo">
             <img src={logo} alt="" />
-            <h1>Prescripto</h1>
+            <h1 className="text-2xl font-semibold">Prescripto</h1>
           </div>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
