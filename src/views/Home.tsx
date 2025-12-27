@@ -1,6 +1,6 @@
-import React from "react";
 import doctorHeaderImg from "/assets/doc_header.png";
 import appointmentDoctor from "/assets/appointment-doc-img.png";
+import groupProfile from "/assets/group_profiles.png";
 
 function Home() {
   const speciality = [
@@ -19,7 +19,7 @@ function Home() {
             Book Appointment <br /> With Trusted Doctors
           </h1>
           <p>
-            <img src="/assets/group_profiles.png" alt="" />
+            <img src={groupProfile} alt="" />
             Simply browse through our extensive list of trusted doctors,
             <br />
             schedule your appointment hassle-free.
