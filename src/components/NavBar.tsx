@@ -50,15 +50,15 @@ function NavBar() {
             <button className="capitalize text-lg font-normal logo_txt_color cursor-pointer">
               {user.username}
             </button>
-            <div className="dropDown_Menu">
+            <div className={`dropDown_Menu ${user.role === "Admin" ? "admin_dropDown_style" : ""}`}>
               {user.role === "Admin" && (
                 <>
-                  <button className="dashboard capitalize cursor-pointer py-4 px-8">
+                  <Link to={"/dashboard"} className="dashboard capitalize cursor-pointer py-4 px-8">
                     dashboard
-                  </button>
-                  <button className="profile capitalize cursor-pointer py-4 px-8">
+                  </Link>
+                  <Link to={"/profile"} className="profile capitalize cursor-pointer py-4 px-8">
                     profile
-                  </button>
+                  </Link>
                 </>
               )}
               <button
