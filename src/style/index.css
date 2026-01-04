@@ -314,13 +314,44 @@ aside ul a.active {
 }
 
 .Add_Doctor_Section {
+  overflow-y: scroll;
   background-color: #f8f9fd;
 }
 .Add_Doctor_Section .subtitle {
   color: #1f2937;
 }
+.Add_Doctor_Section .upload_img_container input[type=file] {
+  visibility: hidden;
+}
+.Add_Doctor_Section .upload_img_container img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Add_Doctor_Section .upload_img_container p {
+  color: #1f2937;
+}
 .Add_Doctor_Section .add_doc_inputs {
-  border: 1px solid #D8D8D8;
+  border: 1px solid #d8d8d8;
   border-radius: 8px;
   background-color: white;
+}
+.Add_Doctor_Section .add_doc_inputs .input_parent {
+  width: 45%;
+}
+.Add_Doctor_Section .add_doc_inputs .input_parent label {
+  color: #4b5563;
+}
+.Add_Doctor_Section .add_doc_inputs .input_parent input,
+.Add_Doctor_Section .add_doc_inputs .input_parent textarea {
+  border: 1px solid #c1c1c1;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  outline: 0;
+}
+.Add_Doctor_Section .add_doc_btn {
+  border-radius: 30px;
+  color: white;
+  background-color: #5f6fff;
 }/*# sourceMappingURL=index.css.map */

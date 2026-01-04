@@ -331,13 +331,45 @@ aside {
 }
 
 .Add_Doctor_Section {
+  overflow-y: scroll;
   background-color: #f8f9fd;
   .subtitle {
     color: $Main_Txt_Color;
   }
+  .upload_img_container {
+    input[type="file"] {
+      visibility: hidden;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+    p {
+      color: $Main_Txt_Color;
+    }
+  }
   .add_doc_inputs {
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8;
     border-radius: 8px;
     background-color: white;
+    .input_parent {
+      width: 45%;
+      label {
+        color: $second_font_color;
+      }
+      input,
+      textarea {
+        border: 1px solid #c1c1c1;
+        border-radius: 8px;
+        padding: 0.5rem 0.8rem;
+        outline: 0;
+      }
+    }
+  }
+  .add_doc_btn {
+    border-radius: 30px;
+    color: white;
+    background-color: $blue_Color;
   }
 }
