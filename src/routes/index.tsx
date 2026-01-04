@@ -10,6 +10,9 @@ import Register from "../views/Register";
 import Login from "../views/Login";
 import Dashboard from "../views/Dashboard/Dashboard";
 import Layout from "../views/Dashboard/DashboardLayout";
+import AddDoctor from "../views/Dashboard/AddDoctor";
+import Appointments from "../views/Dashboard/Appointments";
+import DoctorList from "../views/Dashboard/DoctorList";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +28,9 @@ const router = createBrowserRouter(
 
       <Route path="/dashboard" element={<Layout />}>
         <Route index element={<Dashboard />} />
+        <Route path="add-doctor" element={<AddDoctor />} />
+        <Route path="appointment" element={<Appointments />} />
+        <Route path="doctors" element={<DoctorList />} />
       </Route>
     </>
   )

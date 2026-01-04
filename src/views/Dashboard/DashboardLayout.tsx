@@ -7,7 +7,7 @@ function Layout() {
   return (
     <>
       <NavBar />
-      <div>
+      <div className='flex items-center' style={{height : "calc(100vh - 66px)"}}>
         <Aside />
         <Outlet />
       </div>

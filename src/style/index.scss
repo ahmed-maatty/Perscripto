@@ -97,7 +97,8 @@ nav {
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
-    a , button {
+    a,
+    button {
       text-align: center;
       width: 100%;
       display: block;
@@ -280,5 +281,63 @@ footer {
         width: 410px;
       }
     }
+  }
+}
+
+aside {
+  width: 20%;
+  border-right: 1px solid #adadad;
+  ul {
+    a {
+      img {
+        width: 21px;
+        object-fit: contain;
+      }
+      p {
+        color: #515151;
+      }
+      &.active {
+        background-color: #f2f3ff;
+        border-right: 6px solid $blue_Color;
+      }
+    }
+  }
+}
+
+.dashboard-page {
+  background-color: #f8f9fd;
+  .system_details {
+    .obj_detail {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 4px 0px #0000001a;
+      .img-container {
+        width: 60px;
+        height: 60px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      h4 {
+        color: #515151;
+      }
+      p {
+        color: #8893b0;
+      }
+    }
+  }
+}
+
+.Add_Doctor_Section {
+  background-color: #f8f9fd;
+  .subtitle {
+    color: $Main_Txt_Color;
+  }
+  .add_doc_inputs {
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    background-color: white;
   }
 }
