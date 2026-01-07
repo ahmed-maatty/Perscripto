@@ -8,22 +8,26 @@ interface UserData {
 
 export default async function LoginLogic(userData: UserData) {
   try {
-    const { data, error } = await supaBase.from("Users").select("*").eq("email" , userData.email).single()
+    const { data, error } = await supaBase
+      .from("Users")
+      .select("*")
+      .eq("email", userData.email)
+      .single();
     if (error) {
       toast.error("User Not Found!");
       return {};
     }
-    if (!data){
+    if (!data) {
       toast.error("User Not Found");
     }
-    const { username , id , email , role , password } = data;
-    if(password !== userData.password) {
+    const { username, id, email, role, password } = data;
+    if (password !== userData.password) {
       toast.error(`Invalid Email Or Password`);
-      return {}
+      return {};
     }
     //Set User In Redux State
-    
-    return {username , id , email , role};
+
+    return { username, id, email, role };
   } catch (error) {
     console.log(error);
   }

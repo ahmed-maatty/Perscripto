@@ -1,8 +1,6 @@
 import { toast } from "react-toastify";
 
-export default async function CloudinaryUpload(
-  file: File | null
-) {
+export default async function CloudinaryUpload(file: File | null) {
   if (!file) return toast.error("Please, Upload Doctor Photo First.");
 
   try {
@@ -21,7 +19,7 @@ export default async function CloudinaryUpload(
     );
 
     const data = await res.json();
-    return data.secure_url
+    return data.secure_url;
   } catch (error) {
     console.error(error);
   }

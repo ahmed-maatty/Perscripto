@@ -392,6 +392,7 @@ aside ul a.active {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.doctors_cards .doc_card h1, .doctors_cards .doc_card h2 {
+.doctors_cards .doc_card h1,
+.doctors_cards .doc_card h2 {
   color: #1f2937;
 }/*# sourceMappingURL=index.css.map */

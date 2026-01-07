@@ -10,25 +10,25 @@ function Aside() {
       txt: "Dashboard",
       img: DashIcon,
       navTo: "/dashboard",
-      isEnd :true
+      isEnd: true,
     },
     {
       txt: "Appointments",
       img: appointmentIcon,
       navTo: "/dashboard/appointment",
-      isEnd :false
+      isEnd: false,
     },
     {
       txt: "Add Doctor",
       img: addDoctorIcon,
       navTo: "/dashboard/add-doctor",
-      isEnd :false
+      isEnd: false,
     },
     {
       txt: "Doctors List",
       img: doctorIcon,
       navTo: "/dashboard/doctors",
-      isEnd :false
+      isEnd: false,
     },
   ];
   return (
