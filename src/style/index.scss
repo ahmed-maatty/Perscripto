@@ -373,3 +373,42 @@ aside {
     background-color: $blue_Color;
   }
 }
+
+.btn-primary {
+  background-color: $blue_Color;
+  color: white;
+  border-radius: 8px;
+}
+
+.Doctors_List {
+  height: 100%;
+  width: 100vw;
+}
+
+.doctors_cards {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  .doc_card {
+    border: 1px solid #c9d8ff;
+    width: 22%;
+    border-radius: 15px;
+    .doc_image {
+      height: 240px;
+      background-color: #eaefff;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      position: relative;
+      img {
+        position: absolute;
+        bottom: 0;
+        width: 200px;
+        height: 220px;
+        object-fit: contain;
+      }
+    }
+    h1,h2 {
+      color: $Main_Txt_Color;
+    }
+  }
+}

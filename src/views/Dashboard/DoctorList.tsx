@@ -1,8 +1,11 @@
 import React from 'react'
+import Doctors from '../../components/Doctors'
 
 function DoctorList() {
   return (
-    <div>DoctorList</div>
+    <section className='Doctors_List p-4 flex items-center justify-center'>
+      <Doctors />
+    </section>
   )
 }
 

@@ -1,17 +1,20 @@
-import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import docImage from "/assets/doct_image.svg";
+import createDoctor from "../../api/CreateDoc";
+// import CloudinaryUpload from "../../api/CloudinaryUpload";
+import { useState } from "react";
+import CloudinaryUpload from "../../api/CloudinaryUpload";
 
 interface IForm {
   username: string;
   email: string;
   password: string;
   speciality: string;
-  education: string;
+  degree: string;
   experience: string;
-  fees: string;
-  about: string;
-  image: FileList;
+  fee: string;
+  description: string;
+  image: string;
 }
 
 type FormInputs = {
@@ -23,7 +26,9 @@ type FormInputs = {
 };
 
 function AddDoctor() {
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [file, setFile] = useState<File | null>(null);
+  const [imageUrl, setImageURL] = useState<string>("");
+
   const Inputs: FormInputs[] = [
     {
       labelTxt: "Doctor Name",
@@ -49,7 +54,7 @@ function AddDoctor() {
     {
       labelTxt: "Education",
       inputPlaceHolder: "Doctor Education",
-      inputName: "education",
+      inputName: "degree",
       inputRequiredMsg: "Education Is Required",
       inputType: "text",
     },
@@ -70,32 +75,38 @@ function AddDoctor() {
     {
       labelTxt: "Fees",
       inputPlaceHolder: "Fees",
-      inputName: "fees",
+      inputName: "fee",
       inputRequiredMsg: "Doctor Fees Is Required",
       inputType: "text",
     },
     {
       labelTxt: "About",
       inputPlaceHolder: "About",
-      inputName: "about",
+      inputName: "description",
       inputRequiredMsg: "Doctor About Is Required",
       inputType: "text",
     },
   ];
 
-  
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<IForm>();
 
-
-  const onSubmit: SubmitHandler<IForm> = (data: IForm) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<IForm> = async (data: IForm) => {
+    try {
+      if (errors) {
+        console.log(errors);
+      }
+      const image = await CloudinaryUpload(file);
+      if (!image) return;
+      setImageURL(image);
+      await createDoctor({ ...data, image });
+    } catch (error) {
+      console.log(error);
+    }
   };
-
-  console.log(errors);
 
   return (
     <section className="Add_Doctor_Section w-full h-full p-8">
@@ -104,28 +115,29 @@ function AddDoctor() {
       </h1>
       <div className="add_doc_inputs p-8">
         <form action="post" onSubmit={handleSubmit(onSubmit)}>
-          <div className="upload_img_container w-full flex flex-col items-center justify-center">
+          <div className="upload_img_container w-full flex flex-col items-center justify-center gap-3">
             <label htmlFor="image" className="cursor-pointer">
-              <img src={imagePreview ?? docImage} alt="doctor image" />
+              <img src={imageUrl || docImage} alt="doctor image" width={200} />
               <p className="capitalize py-2 text-center">doctor image</p>
             </label>
+
             <input
               type="file"
+              id="image"
+              accept="image/*"
+              hidden
               {...register("image", {
-                required: "Image is required",
                 onChange: (e) => {
-                  const file = e.target.files?.[0];
-                  if (!file) return;
-                  setImagePreview(URL.createObjectURL(file));
+                  const selectedFile = e.target.files?.[0];
+                  if (selectedFile) setFile(selectedFile);
                 },
               })}
-              id="image"
             />
           </div>
           <div className="inputs_conainer flex flex-wrap items-center justify-evenly w-full gap-4">
             {Inputs.map((input, idx) => (
               <div className="input_parent flex flex-col gap-2" key={idx}>
-                {input.inputName !== "about" ? (
+                {input.inputName !== "description" ? (
                   <>
                     <label htmlFor={input.inputName}>{input.labelTxt}</label>
                     <input
