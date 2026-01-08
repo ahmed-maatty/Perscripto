@@ -536,4 +536,34 @@ aside ul a.active {
   width: 100px;
   height: 50px;
   color: #1f2937;
+}
+
+.Doctor_Section .doc_img {
+  background-color: #5f6fff;
+  border-radius: 1rem;
+}
+.Doctor_Section .doc_img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Doctor_Section .doctor_details {
+  border: 1px solid #8893b0;
+  border-radius: 1rem;
+}
+.Doctor_Section .doctor_details .doc_degree_experinece {
+  color: #4b5563;
+}
+.Doctor_Section .doctor_details .doc_degree_experinece span {
+  padding: 4px 12px;
+  border: 1px solid #8893b0;
+  border-radius: 25px;
+}
+.Doctor_Section .doctor_details .about_container p {
+  color: #4b5563;
+}
+.Doctor_Section .doctor_details .fee_container h3 {
+  color: #4b5563;
+}
+.Doctor_Section .doctor_details .fee_container h3 span {
+  color: #1f2937;
 }/*# sourceMappingURL=index.css.map */

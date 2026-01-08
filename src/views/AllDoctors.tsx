@@ -3,7 +3,7 @@ import Specialities from "../components/Specialities";
 import GetSpecificDotors from "../components/GetSpecificDotors";
 
 export type Specialist =
-  | "General Physician"
+  | "General physician"
   | "Gastroenterologist"
   | "Neurologist"
   | "Pediatricians"

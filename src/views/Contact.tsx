@@ -1,4 +1,3 @@
-import React from "react";
 import contactImg from "/assets/contact_image.png";
 
 function Contact() {

@@ -16,6 +16,7 @@ import DoctorList from "../views/Dashboard/DoctorList";
 import AllDoctors from "../views/AllDoctors";
 import About from "../views/About";
 import Contact from "../views/Contact";
+import Doctor from "../views/Doctor";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="all-doctors" element={<AllDoctors />} />
+        <Route path="doctor/:id" element={<Doctor />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
       </Route>

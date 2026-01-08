@@ -553,3 +553,38 @@ aside {
     }
   }
 }
+
+.Doctor_Section {
+  .doc_img {
+    background-color: #5f6fff;
+    border-radius: 1rem;
+    img {
+      object-fit: contain;
+    }
+  }
+  .doctor_details {
+    border: 1px solid #8893b0;
+    border-radius: 1rem;
+    .doc_degree_experinece {
+      color: $second_font_color;
+      span {
+        padding: 4px 12px;
+        border: 1px solid #8893b0;
+        border-radius: 25px;
+      }
+    }
+    .about_container {
+      p {
+        color: $second_font_color;
+      }
+    }
+    .fee_container {
+      h3 {
+        color: $second_font_color;
+        span {
+          color: $Main_Txt_Color;
+        }
+      }
+    }
+  }
+}

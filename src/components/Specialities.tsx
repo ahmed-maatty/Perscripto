@@ -6,7 +6,7 @@ interface Iprops {
 
 function Specialities({ setSpecialist }: Iprops) {
   const btns: { txt: string; specialist: Specialist }[] = [
-    { txt: "General physician", specialist: "General Physician" },
+    { txt: "General physician", specialist: "General physician" },
     { txt: "Gastroenterologist", specialist: "Gastroenterologist" },
     { txt: "Pediatricians", specialist: "Pediatricians" },
     { txt: "Dermatologist", specialist: "Dermatologist" },

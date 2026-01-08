@@ -15,7 +15,7 @@ export type Doctor = {
 
 interface stateType {
   doctors: Doctor[];
-  doctor: Doctor | null;
+  doctor: Doctor[] | null;
 }
 
 const initialState: stateType = {
@@ -30,7 +30,7 @@ const doctorSlice = createSlice({
     setDoctors: (state, action: PayloadAction<Doctor[]>) => {
       state.doctors = action.payload;
     },
-    setDoctor: (state, action: PayloadAction<Doctor>) => {
+    setDoctor: (state, action: PayloadAction<Doctor[]>) => {
       state.doctor = action.payload
     }
   }

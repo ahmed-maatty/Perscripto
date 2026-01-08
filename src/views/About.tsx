@@ -1,4 +1,3 @@
-import React from "react";
 import aboutImage from "/assets/about_image.png";
 
 function About() {

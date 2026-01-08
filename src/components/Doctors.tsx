@@ -28,7 +28,7 @@ function Doctors() {
         <p>No doctors found</p>
       ) : (
         doctors.map((doc) => (
-          <Link to={`/doctors/${doc.id}`} key={doc.id} className="doc_card">
+          <Link to={`/doctor/${doc.id}`} key={doc.id} className="doc_card">
             <div className="doc_image w-full flex items-center justify-center p-2">
               <img src={doc.image} alt="" />
             </div>

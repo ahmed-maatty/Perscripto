@@ -60,7 +60,7 @@ function DoctorSlider() {
       {doctors.map((doc) => (
         <div key={doc.id} className="px-3">
           <Link
-            to={`doctors/${doc.id}`}
+            to={`doctor/${doc.id}`}
             className="doc_card block"
             style={{ width: "100%" }}
           >
