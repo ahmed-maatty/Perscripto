@@ -1,6 +1,7 @@
 import doctorHeaderImg from "/assets/doc_header.png";
 import appointmentDoctor from "/assets/appointment-doc-img.png";
 import groupProfile from "/assets/group_profiles.png";
+import DoctorSlider from "../components/DoctorSlider";
 
 function Home() {
   const speciality = [
@@ -49,6 +50,10 @@ function Home() {
         </div>
       </div>
       {/** Doctor Slider **/}
+
+      <div className="Doctors_Section">
+        <DoctorSlider />
+      </div>
 
       <div className="BookNow">
         <div className="details">

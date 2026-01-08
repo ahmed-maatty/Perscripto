@@ -19,7 +19,6 @@ function Doctors() {
         console.error(error);
       }
     };
-
     fetchDoctors();
   }, [dispatch]);
 

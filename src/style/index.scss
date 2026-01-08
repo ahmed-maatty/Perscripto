@@ -284,6 +284,11 @@ footer {
   }
 }
 
+.Doctors_Section {
+  width: calc(100% - 7rem);
+  margin: 3.5rem auto;
+}
+
 aside {
   width: 20%;
   border-right: 1px solid #adadad;
@@ -389,27 +394,162 @@ aside {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  .doc_card {
-    border: 1px solid #c9d8ff;
-    width: 22%;
-    border-radius: 15px;
-    .doc_image {
-      height: 240px;
-      background-color: #eaefff;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      position: relative;
+}
+.doc_card {
+  border: 1px solid #c9d8ff;
+  width: 22%;
+  border-radius: 15px;
+  .doc_image {
+    height: 240px;
+    background-color: #eaefff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    img {
+      position: absolute;
+      bottom: 0;
+      width: 200px;
+      height: 220px;
+      object-fit: contain;
+    }
+  }
+  h1,
+  h2 {
+    color: $Main_Txt_Color;
+  }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  margin: 1rem 0;
+}
+
+.section_title {
+  color: $Main_Txt_Color;
+}
+
+.selectSpecialityBtn {
+  width: 100%;
+  border: 1px solid #b4b4b4;
+  border-radius: 10px;
+  color: $second_font_color;
+  font-size: 18px;
+}
+
+.About {
+  padding: 70px 50px;
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    span {
+      font-weight: 500;
+    }
+  }
+  .about-contact {
+    display: flex;
+    gap: 1.5rem;
+    .aboutImg {
+      flex: 1;
       img {
-        position: absolute;
-        bottom: 0;
-        width: 200px;
-        height: 220px;
+        width: 100%;
         object-fit: contain;
       }
     }
-    h1,
-    h2 {
+    .abou-main {
+      flex: 3;
+      line-height: 33px;
+      color: $second_font_color;
+      h6 {
+        margin-bottom: 2rem;
+        font-size: 18px;
+        color: $Main_Txt_Color;
+      }
+      p {
+        font-weight: 300;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .whyUs {
+    p {
       color: $Main_Txt_Color;
+      font-size: 22px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      span {
+        font-weight: 500;
+      }
+    }
+    .table {
+      border: 1px solid #ababab;
+      display: flex;
+      div {
+        padding: 50px;
+        flex: 1;
+        &.middle {
+          border-left: 1px solid #ababab;
+          border-right: 1px solid #ababab;
+        }
+        h5 {
+          margin-bottom: 2rem;
+          color: $Main_Txt_Color;
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+          color: $second_font_color;
+        }
+      }
+    }
+  }
+}
+
+.Contact_Section {
+  padding: 70px 50px;
+  h1 {
+    color: $Main_Txt_Color;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    span {
+      font-weight: 500;
+    }
+  }
+  .contact_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    .contact_img {
+      width: 400px;
+      height: 400px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .contact_info {
+      color: $second_font_color;
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+      }
+      p {
+        margin-bottom: 1.3rem;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      button {
+        background: transparent;
+        border: 1px solid #1f2937;
+        width: 100px;
+        height: 50px;
+        color: $Main_Txt_Color;
+      }
     }
   }
 }

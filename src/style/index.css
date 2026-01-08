@@ -271,6 +271,11 @@ footer .copy_write p {
   width: 410px;
 }
 
+.Doctors_Section {
+  width: calc(100% - 7rem);
+  margin: 3.5rem auto;
+}
+
 aside {
   width: 20%;
   border-right: 1px solid #adadad;
@@ -372,19 +377,20 @@ aside ul a.active {
   height: 100%;
   overflow-y: scroll;
 }
-.doctors_cards .doc_card {
+
+.doc_card {
   border: 1px solid #c9d8ff;
   width: 22%;
   border-radius: 15px;
 }
-.doctors_cards .doc_card .doc_image {
+.doc_card .doc_image {
   height: 240px;
   background-color: #eaefff;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   position: relative;
 }
-.doctors_cards .doc_card .doc_image img {
+.doc_card .doc_image img {
   position: absolute;
   bottom: 0;
   width: 200px;
@@ -392,7 +398,142 @@ aside ul a.active {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.doctors_cards .doc_card h1,
-.doctors_cards .doc_card h2 {
+.doc_card h1,
+.doc_card h2 {
+  color: #1f2937;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  margin: 1rem 0;
+}
+
+.section_title {
+  color: #1f2937;
+}
+
+.selectSpecialityBtn {
+  width: 100%;
+  border: 1px solid #b4b4b4;
+  border-radius: 10px;
+  color: #4b5563;
+  font-size: 18px;
+}
+
+.About {
+  padding: 70px 50px;
+}
+.About h1 {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+.About h1 span {
+  font-weight: 500;
+}
+.About .about-contact {
+  display: flex;
+  gap: 1.5rem;
+}
+.About .about-contact .aboutImg {
+  flex: 1;
+}
+.About .about-contact .aboutImg img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.About .about-contact .abou-main {
+  flex: 3;
+  line-height: 33px;
+  color: #4b5563;
+}
+.About .about-contact .abou-main h6 {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  color: #1f2937;
+}
+.About .about-contact .abou-main p {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.About .whyUs p {
+  color: #1f2937;
+  font-size: 22px;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.About .whyUs p span {
+  font-weight: 500;
+}
+.About .whyUs .table {
+  border: 1px solid #ababab;
+  display: flex;
+}
+.About .whyUs .table div {
+  padding: 50px;
+  flex: 1;
+}
+.About .whyUs .table div.middle {
+  border-left: 1px solid #ababab;
+  border-right: 1px solid #ababab;
+}
+.About .whyUs .table div h5 {
+  margin-bottom: 2rem;
+  color: #1f2937;
+  font-size: 18px;
+}
+.About .whyUs .table div p {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.Contact_Section {
+  padding: 70px 50px;
+}
+.Contact_Section h1 {
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.Contact_Section h1 span {
+  font-weight: 500;
+}
+.Contact_Section .contact_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Contact_Section .contact_content .contact_img {
+  width: 400px;
+  height: 400px;
+}
+.Contact_Section .contact_content .contact_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Contact_Section .contact_content .contact_info {
+  color: #4b5563;
+}
+.Contact_Section .contact_content .contact_info h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.Contact_Section .contact_content .contact_info p {
+  margin-bottom: 1.3rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+.Contact_Section .contact_content .contact_info button {
+  background: transparent;
+  border: 1px solid #1f2937;
+  width: 100px;
+  height: 50px;
   color: #1f2937;
 }/*# sourceMappingURL=index.css.map */

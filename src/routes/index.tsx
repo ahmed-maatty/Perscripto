@@ -13,12 +13,18 @@ import Layout from "../views/Dashboard/DashboardLayout";
 import AddDoctor from "../views/Dashboard/AddDoctor";
 import Appointments from "../views/Dashboard/Appointments";
 import DoctorList from "../views/Dashboard/DoctorList";
+import AllDoctors from "../views/AllDoctors";
+import About from "../views/About";
+import Contact from "../views/Contact";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
+        <Route path="all-doctors" element={<AllDoctors />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
 
       <Route path="/auth" element={<RootLayout />}>
