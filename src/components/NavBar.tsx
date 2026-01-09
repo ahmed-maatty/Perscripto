@@ -63,12 +63,6 @@ function NavBar() {
                   >
                     dashboard
                   </Link>
-                  <Link
-                    to={"/profile"}
-                    className="profile capitalize cursor-pointer py-4 px-8"
-                  >
-                    profile
-                  </Link>
                 </>
               )}
               <button

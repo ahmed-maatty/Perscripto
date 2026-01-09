@@ -21,7 +21,7 @@ ul {
 }
 
 .admin_dropDown_style {
-  bottom: -170px !important;
+  bottom: -115px !important;
   left: -15px;
 }
 
@@ -607,7 +607,7 @@ aside {
       color: $second_font_color;
       border-radius: 30px;
       transition: all 0.3s;
-      &.activ,
+      &.active,
       &:hover {
         transform: scale(1.1);
         color: white;

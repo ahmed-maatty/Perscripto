@@ -16,7 +16,7 @@ ul {
 }
 
 .admin_dropDown_style {
-  bottom: -170px !important;
+  bottom: -115px !important;
   left: -15px;
 }
 
@@ -583,7 +583,7 @@ aside ul a.active {
   border-radius: 30px;
   transition: all 0.3s;
 }
-.Booking_Section .Booking_Section_Content .container.activ, .Booking_Section .Booking_Section_Content .container:hover {
+.Booking_Section .Booking_Section_Content .container.active, .Booking_Section .Booking_Section_Content .container:hover {
   transform: scale(1.1);
   color: white;
   background-color: #5f6fff;

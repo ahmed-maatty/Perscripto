@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import createAppointment from "../api/CreateAppointment";
 
 interface DatesInterface {
   day: string;
@@ -6,7 +7,12 @@ interface DatesInterface {
   time: string;
 }
 
-function Booking() {
+interface IProps {
+  docname: string;
+  username: string;
+}
+
+function Booking({ docname, username }: IProps) {
   const [day, setDay] = useState("");
   const [time, setTime] = useState("");
   console.log(day, time);
@@ -19,17 +25,33 @@ function Booking() {
     { day: "SAT", date: "15", time: "10.30am" },
     { day: "SUN", date: "16", time: "11.00am" },
   ];
-  const appointmentHandler = () => {
-    console.log(`You Booked In ${day} at ${time} oclock`);
+
+  const appointmentHandler = async () => {
+    await createAppointment({ day, time, docname, username });
+  };
+
+  const handleBtnTimeActive = (e : HTMLButtonElement) => {
+    document
+      .querySelectorAll(".time_btn")
+      .forEach((btn) => btn.classList.remove("active"));
+    e.classList.add("active");
+  };
+
+  const handleBtnDayActive = (e : HTMLButtonElement) => {
+    document
+      .querySelectorAll(".day_btn")
+      .forEach((btn) => btn.classList.remove("active"));
+    e.classList.add("active");
   };
   return (
     <section className="Booking_Section_Content">
       <div className="day_date flex items-center justify-center gap-7">
         {dates.map((date, idx) => (
           <button
-            className="container cursor-pointer"
+            className="container cursor-pointer day_btn"
             key={idx}
-            onClick={() => {
+            onClick={(e) => {
+              handleBtnDayActive(e.currentTarget)
               setDay(`${date.day} ${date.date}`);
             }}
           >
@@ -41,9 +63,12 @@ function Booking() {
       <div className="time flex items-center justify-center gap-7 mt-6">
         {dates.map((date, idx) => (
           <button
-            className="container py-1 px-4 cursor-pointer"
+            className="container py-1 px-4 cursor-pointer time_btn"
             key={idx}
-            onClick={() => setTime(`${date.time}`)}
+            onClick={(e) => {
+              handleBtnTimeActive(e.currentTarget);
+              setTime(`${date.time}`);
+            }}
           >
             <h4>{date.time}</h4>
           </button>

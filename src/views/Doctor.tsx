@@ -10,6 +10,7 @@ function Doctor() {
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
   const { doctor } = useSelector((state: RootState) => state.Doctor);
+  const { user } = useSelector((state: RootState) => state.User);
   const fetchDoctor = async () => {
     if (!id) return;
     const { data } = await GetDoctor(id);
@@ -48,7 +49,7 @@ function Doctor() {
       </div>
       <div className="Booking_Section my-4 p-4 flex items-center justify-center flex-col gap-8">
         <h2 className="capitalize item-start">Booking slots</h2>
-        <Booking />
+        <Booking docname={doctor[0].username} username={user?.username} />
       </div>
     </section>
   );
