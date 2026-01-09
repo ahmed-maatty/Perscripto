@@ -4,6 +4,7 @@ import GetDoctor from "../api/BringDoctor";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../store/store";
 import { setDoctor } from "../store/doctorSlice";
+import Booking from "../components/Booking";
 
 function Doctor() {
   const { id } = useParams();
@@ -17,6 +18,8 @@ function Doctor() {
   useEffect(() => {
     fetchDoctor();
   }, []);
+
+  if (!doctor) return <h1>Loading....</h1>;
 
   return (
     <section className="Doctor_Section">
@@ -42,6 +45,10 @@ function Doctor() {
             </h3>
           </div>
         </div>
+      </div>
+      <div className="Booking_Section my-4 p-4 flex items-center justify-center flex-col gap-8">
+        <h2 className="capitalize item-start">Booking slots</h2>
+        <Booking />
       </div>
     </section>
   );

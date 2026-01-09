@@ -588,3 +588,42 @@ aside {
     }
   }
 }
+
+.Booking_Section {
+  h2 {
+    color: $second_font_color;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .Booking_Section_Content {
+    .day_date {
+      .container {
+        width: 60px;
+        height: 90px;
+      }
+    }
+    .container {
+      border: 1px solid #9ca3af;
+      color: $second_font_color;
+      border-radius: 30px;
+      transition: all 0.3s;
+      &.activ,
+      &:hover {
+        transform: scale(1.1);
+        color: white;
+        background-color: $blue_Color;
+        box-shadow: 0px 4px 12px 0px #5f6fff66;
+      }
+    }
+    .Booking_Btn {
+      transition: all 0.3s ease;
+      border-radius: 30px;
+      background-color: $blue_Color;
+      color: white;
+      box-shadow: 0px 4px 12px 0px #5f6fff66;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
