@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./userSlice"
 import doctorReducer from "./doctorSlice"
+import appointmentsReducer from "./appointmentSlice";
 import storage from "redux-persist/lib/storage";
 import { persistStore, persistReducer } from "redux-persist";
 
@@ -14,14 +15,21 @@ const doctorsConfig = {
   storage
 }
 
+const appointmentConfig = {
+  key: "appointments",
+  storage
+}
+
 const persistedUserReducer = persistReducer(userConfig, userReducer);
 const persistedDoctorReducer = persistReducer(doctorsConfig, doctorReducer);
+const persistedAppointments = persistReducer(appointmentConfig, appointmentsReducer)
 
 
 export const store = configureStore({
   reducer: {
     User: persistedUserReducer,
-    Doctor: persistedDoctorReducer
+    Doctor: persistedDoctorReducer,
+    Appointments: persistedAppointments
   }
 });
 

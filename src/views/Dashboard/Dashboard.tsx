@@ -2,6 +2,7 @@ import React from "react";
 import patientIcon from "/assets/patients_icon.svg";
 import appointmentIcon from "/assets/appointments_icon.svg";
 import doctorIcon from "/assets/doctor_icon.svg";
+import GetAppointments from "../../components/GetAppointments";
 
 function Dashboard() {
   const details = [
@@ -35,6 +36,9 @@ function Dashboard() {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <GetAppointments />
       </div>
     </section>
   );

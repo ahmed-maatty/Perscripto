@@ -386,8 +386,7 @@ aside {
 }
 
 .Doctors_List {
-  height: 100%;
-  width: 100vw;
+  background-color: #f8f9fd;
 }
 
 .doctors_cards {
@@ -623,6 +622,30 @@ aside {
       box-shadow: 0px 4px 12px 0px #5f6fff66;
       &:hover {
         transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.appointment_section {
+  background-color: #f8f9fd;
+  overflow-y: scroll;
+  h1 {
+    color: $Main_Txt_Color;
+  }
+}
+
+.appointment_taple_container {
+  border-radius: 15px;
+  border: 1px solid #d8d8d8;
+  background-color: #fff;
+  .taple_content {
+    border-bottom: 1px solid #d8d8d8;
+    .deleteBtn {
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
       }
     }
   }

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import createAppointment from "../api/CreateAppointment";
+import { toast } from "react-toastify";
 
 interface DatesInterface {
   day: string;
@@ -15,7 +16,7 @@ interface IProps {
 function Booking({ docname, username }: IProps) {
   const [day, setDay] = useState("");
   const [time, setTime] = useState("");
-  console.log(day, time);
+
   const dates: Array<DatesInterface> = [
     { day: "MON", date: "10", time: "8.00am" },
     { day: "TUE", date: "11", time: "8.30am" },
@@ -27,17 +28,20 @@ function Booking({ docname, username }: IProps) {
   ];
 
   const appointmentHandler = async () => {
+    if (!day || !time) {
+      return toast.error("Please, Enter Both Day & Time");
+    }
     await createAppointment({ day, time, docname, username });
   };
 
-  const handleBtnTimeActive = (e : HTMLButtonElement) => {
+  const handleBtnTimeActive = (e: HTMLButtonElement) => {
     document
       .querySelectorAll(".time_btn")
       .forEach((btn) => btn.classList.remove("active"));
     e.classList.add("active");
   };
 
-  const handleBtnDayActive = (e : HTMLButtonElement) => {
+  const handleBtnDayActive = (e: HTMLButtonElement) => {
     document
       .querySelectorAll(".day_btn")
       .forEach((btn) => btn.classList.remove("active"));
@@ -51,7 +55,7 @@ function Booking({ docname, username }: IProps) {
             className="container cursor-pointer day_btn"
             key={idx}
             onClick={(e) => {
-              handleBtnDayActive(e.currentTarget)
+              handleBtnDayActive(e.currentTarget);
               setDay(`${date.day} ${date.date}`);
             }}
           >

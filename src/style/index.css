@@ -368,8 +368,7 @@ aside ul a.active {
 }
 
 .Doctors_List {
-  height: 100%;
-  width: 100vw;
+  background-color: #f8f9fd;
 }
 
 .doctors_cards {
@@ -598,4 +597,27 @@ aside ul a.active {
 }
 .Booking_Section .Booking_Section_Content .Booking_Btn:hover {
   transform: scale(1.1);
+}
+
+.appointment_section {
+  background-color: #f8f9fd;
+  overflow-y: scroll;
+}
+.appointment_section h1 {
+  color: #1f2937;
+}
+
+.appointment_taple_container {
+  border-radius: 15px;
+  border: 1px solid #d8d8d8;
+  background-color: #fff;
+}
+.appointment_taple_container .taple_content {
+  border-bottom: 1px solid #d8d8d8;
+}
+.appointment_taple_container .taple_content .deleteBtn img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=index.css.map */
