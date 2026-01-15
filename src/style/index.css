@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+  font-display: swap;
 }
 
 ul {
@@ -215,19 +216,7 @@ footer .copy_write p {
   bottom: 0;
 }
 .Home .Specility {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  text-align: center;
   margin-top: 3.5rem;
-}
-.Home .Specility .speciality-content {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
 }
 .Home .Specility .speciality-content div img {
   width: 105px;
@@ -245,9 +234,6 @@ footer .copy_write p {
   background-color: #5f6fff;
   margin: 3.5rem auto;
   border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 3rem;
   z-index: 1;
   position: relative;
@@ -260,7 +246,6 @@ footer .copy_write p {
 }
 .Home .BookNow .book_image {
   z-index: 2;
-  display: flex;
   position: absolute;
   right: 3rem;
   bottom: 0;
@@ -423,19 +408,11 @@ aside ul a.active {
   padding: 70px 50px;
 }
 .About h1 {
-  text-align: center;
   font-weight: 300;
   margin-bottom: 3rem;
 }
 .About h1 span {
   font-weight: 500;
-}
-.About .about-contact {
-  display: flex;
-  gap: 1.5rem;
-}
-.About .about-contact .aboutImg {
-  flex: 1;
 }
 .About .about-contact .aboutImg img {
   width: 100%;
@@ -443,25 +420,20 @@ aside ul a.active {
      object-fit: contain;
 }
 .About .about-contact .abou-main {
-  flex: 3;
   line-height: 33px;
   color: #4b5563;
 }
 .About .about-contact .abou-main h6 {
-  margin-bottom: 2rem;
   font-size: 18px;
   color: #1f2937;
 }
 .About .about-contact .abou-main p {
   font-weight: 300;
-  margin-bottom: 2rem;
 }
 .About .whyUs p {
   color: #1f2937;
   font-size: 22px;
-  margin-bottom: 2rem;
   font-weight: 300;
-  text-transform: uppercase;
 }
 .About .whyUs p span {
   font-weight: 500;
@@ -472,14 +444,12 @@ aside ul a.active {
 }
 .About .whyUs .table div {
   padding: 50px;
-  flex: 1;
 }
 .About .whyUs .table div.middle {
   border-left: 1px solid #ababab;
   border-right: 1px solid #ababab;
 }
 .About .whyUs .table div h5 {
-  margin-bottom: 2rem;
   color: #1f2937;
   font-size: 18px;
 }
@@ -493,18 +463,10 @@ aside ul a.active {
 }
 .Contact_Section h1 {
   color: #1f2937;
-  text-align: center;
-  margin-bottom: 2rem;
   font-weight: 300;
 }
 .Contact_Section h1 span {
   font-weight: 500;
-}
-.Contact_Section .contact_content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
 }
 .Contact_Section .contact_content .contact_img {
   width: 400px;
@@ -521,8 +483,6 @@ aside ul a.active {
 .Contact_Section .contact_content .contact_info h3 {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
 }
 .Contact_Section .contact_content .contact_info p {
   margin-bottom: 1.3rem;

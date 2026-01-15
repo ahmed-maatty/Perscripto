@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import BringDoctors from "../api/BringDoctors";
+import BringDoctors from "../api/BringDoctors.ts";
 import { useDispatch, useSelector } from "react-redux";
 import { setDoctors } from "../store/doctorSlice";
 import type { AppDispatch, RootState } from "../store/store";

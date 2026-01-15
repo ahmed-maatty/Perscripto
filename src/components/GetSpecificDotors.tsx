@@ -1,4 +1,4 @@
-import type { Specialist } from "../views/AllDoctors";
+import type { Specialist } from "../views/Home/AllDoctors";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
 import { Link } from "react-router";

@@ -1,4 +1,4 @@
-import type { Specialist } from "../views/AllDoctors";
+import type { Specialist } from "../views/Home/AllDoctors";
 
 interface Iprops {
   setSpecialist: React.Dispatch<React.SetStateAction<Specialist | null>>;

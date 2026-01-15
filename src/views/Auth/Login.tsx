@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import Input from "../components/Input";
-import LoginLogic from "../api/LoginFunc";
+import Input from "../../components/Input.tsx";
+import LoginLogic from "../../api/LoginFunc.ts";
 import { useDispatch } from "react-redux";
-import { setUser } from "../store/userSlice";
+import { setUser } from "../../store/userSlice.ts";
+import { useNavigate } from "react-router";
 
 function Login() {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -19,6 +20,9 @@ function Login() {
     try {
       const user = await LoginLogic(formData);
       dispatch(setUser(user));
+      setTimeout(() => {
+        navigate("/");
+      }, 1500);
     } catch (error) {
       console.log("Error Happend ", error);
     }

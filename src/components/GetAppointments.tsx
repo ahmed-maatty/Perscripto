@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import GetAppointmentLogic from "../api/GetAllAppointments";
+import GetAppointmentLogic from "../api/GetAllAppointments.ts";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../store/store";
 import { setAppointment } from "../store/appointmentSlice";
 import delIcon from "/assets/deleteIcon.png";
-import deleteAppointmentsLogic from "../api/DeleteAppointment";
+import deleteAppointmentsLogic from "../api/DeleteAppointment.ts";
 import { toast } from "react-toastify";
 
 function GetAppointments() {

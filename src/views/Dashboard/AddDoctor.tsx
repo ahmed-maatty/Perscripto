@@ -1,9 +1,8 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
 import docImage from "/assets/doct_image.svg";
-import createDoctor from "../../api/CreateDoc";
-// import CloudinaryUpload from "../../api/CloudinaryUpload";
+import createDoctor from "../../api/CreateDoc.ts";
 import { useState } from "react";
-import CloudinaryUpload from "../../api/CloudinaryUpload";
+import CloudinaryUpload from "../../api/CloudinaryUpload.ts";
 
 interface IForm {
   username: string;

@@ -1,4 +1,3 @@
-import React from "react";
 import GetAppointments from "../../components/GetAppointments";
 
 function Appointments() {

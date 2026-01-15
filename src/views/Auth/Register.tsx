@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Input from "../components/Input";
+import Input from "../../components/Input.tsx";
 import { Link } from "react-router";
-import CreateUser from "../api/CreateUser";
+import CreateUser from "../../api/CreateUser.ts";
 
 function Register() {
   const [formData, setFormData] = useState({

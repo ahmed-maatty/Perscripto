@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import GetDoctor from "../api/BringDoctor";
+import GetDoctor from "../../api/BringDoctor.ts";
 import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../store/store";
-import { setDoctor } from "../store/doctorSlice";
-import Booking from "../components/Booking";
+import type { AppDispatch, RootState } from "../../store/store.ts";
+import { setDoctor } from "../../store/doctorSlice.ts";
+import Booking from "../../components/Booking.tsx";
 
 function Doctor() {
   const { id } = useParams();

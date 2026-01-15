@@ -1,7 +1,7 @@
 import doctorHeaderImg from "/assets/doc_header.png";
 import appointmentDoctor from "/assets/appointment-doc-img.png";
 import groupProfile from "/assets/group_profiles.png";
-import DoctorSlider from "../components/DoctorSlider";
+import DoctorSlider from "../../components/DoctorSlider";
 
 function Home() {
   const speciality = [
@@ -30,7 +30,7 @@ function Home() {
           <img src={doctorHeaderImg} alt="" />
         </div>
       </div>
-      <div className="Specility">
+      <div className="Specility w-full flex flex-col items-center gap-5 text-center">
         <div className="section_title">
           <h2>Find by Speciality</h2>
           <p>
@@ -40,7 +40,7 @@ function Home() {
             your appointment hassle-free.
           </p>
         </div>
-        <div className="speciality-content">
+        <div className="speciality-content flex items-center gap-6 mt-8">
           {speciality.map((item, index) => (
             <div key={index} className="flex flex-col items-center">
               <img src={item.img} alt="" />
@@ -50,18 +50,17 @@ function Home() {
         </div>
       </div>
       {/** Doctor Slider **/}
-
       <div className="Doctors_Section">
         <DoctorSlider />
       </div>
 
-      <div className="BookNow">
+      <div className="BookNow flex items-center justify-between">
         <div className="details">
           <h1>
             Book Appointment <br /> With 100+ Trusted Doctors
           </h1>
         </div>
-        <div className="book_image">
+        <div className="book_image flex">
           <img src={appointmentDoctor} alt="" />
         </div>
       </div>

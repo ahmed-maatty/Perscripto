@@ -1,5 +1,5 @@
 import { useState } from "react";
-import createAppointment from "../api/CreateAppointment";
+import createAppointment from "../api/CreateAppointment.ts";
 import { toast } from "react-toastify";
 
 interface DatesInterface {

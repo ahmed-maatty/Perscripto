@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import BringDoctors from "../api/BringDoctors";
+import BringDoctors from "../api/BringDoctors.ts";
 import { setDoctors } from "../store/doctorSlice";
 import Slider from "react-slick";
 import { Link } from "react-router";
