@@ -619,10 +619,14 @@ aside {
 }
 
 .menu {
+  display: none;
   z-index: 999;
 }
 
 @media screen and (max-width: 900px) {
+  .menu {
+    display: block;
+  }
   nav {
     position: sticky;
     .navigation {

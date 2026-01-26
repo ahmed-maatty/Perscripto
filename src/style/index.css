@@ -583,10 +583,14 @@ aside ul a.active {
 }
 
 .menu {
+  display: none;
   z-index: 999;
 }
 
 @media screen and (max-width: 900px) {
+  .menu {
+    display: block;
+  }
   nav {
     position: sticky;
   }
