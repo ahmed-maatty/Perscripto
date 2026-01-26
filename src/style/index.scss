@@ -452,7 +452,7 @@ aside {
   .whyUs {
     p {
       color: $Main_Txt_Color;
-      font-size: 22px; 
+      font-size: 22px;
       font-weight: 300;
       span {
         font-weight: 500;
@@ -614,6 +614,171 @@ aside {
         height: 50px;
         object-fit: contain;
       }
+    }
+  }
+}
+
+.menu {
+  z-index: 999;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    position: sticky;
+    .navigation {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      ul {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+      }
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  .Home {
+    .Hero {
+      padding: 0 1rem;
+      flex-direction: column;
+      .hero_desc {
+        width: 100%;
+        padding-top: 6rem;
+        p {
+          display: none;
+        }
+      }
+      .hero_img {
+        width: 100%;
+        img {
+          position: static;
+        }
+      }
+    }
+    .Specility {
+      .speciality-content {
+        flex-direction: column;
+      }
+    }
+    .BookNow {
+      width: calc(100% - 2rem);
+      height: auto;
+      padding: 1rem;
+      margin: 1rem;
+      .book_image {
+        display: none;
+      }
+    }
+  }
+
+  .All_Doctors_Section_Content {
+    flex-direction: column;
+  }
+
+  .doctors_cards {
+    align-items: center;
+    justify-content: center;
+    .doc_card {
+      width: 95%;
+    }
+  }
+
+  footer {
+    .footer_data {
+      flex-direction: column;
+      gap: 2rem;
+      .footer_desc {
+        width: 100%;
+      }
+      .footer_links {
+        h1 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .About {
+    h1 {
+      margin-bottom: 1rem;
+    }
+    padding: 1rem;
+    .about-contact {
+      flex-direction: column;
+    }
+    .whyUs {
+      .table {
+        flex-direction: column;
+        div {
+          padding: 3rem 1rem;
+          letter-spacing: 1px;
+          &.middle {
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #ababab;
+            border-top: 1px solid #ababab;
+          }
+        }
+      }
+    }
+  }
+
+  .Contact_Section {
+    padding: 2rem 1rem;
+    .contact_content {
+      flex-direction: column;
+      .contact_img {
+        width: 100%;
+        height: auto;
+      }
+      .contact_info {
+        width: 100%;
+        letter-spacing: 1px;
+        p {
+          font-size: 16px;
+        }
+        button {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .auth_form {
+    width: 90%;
+  }
+
+  .dashboard_layout {
+    flex-direction: column;
+    aside {
+      width: 95%;
+      border-right: none;
+      border-bottom: 1px solid #adadad;
+    }
+    .system_details {
+      flex-wrap: wrap;
+    }
+
+    .taple_content {
+      .flex-1 {
+        display: none;
+      }
+    }
+
+    .input_parent {
+      width: 95% !important;
     }
   }
 }

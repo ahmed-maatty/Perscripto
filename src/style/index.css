@@ -580,4 +580,147 @@ aside ul a.active {
   height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.menu {
+  z-index: 999;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    position: sticky;
+  }
+  nav .navigation {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+  }
+  nav .navigation ul {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  nav .navigation.active {
+    display: flex;
+  }
+  .Home .Hero {
+    padding: 0 1rem;
+    flex-direction: column;
+  }
+  .Home .Hero .hero_desc {
+    width: 100%;
+    padding-top: 6rem;
+  }
+  .Home .Hero .hero_desc p {
+    display: none;
+  }
+  .Home .Hero .hero_img {
+    width: 100%;
+  }
+  .Home .Hero .hero_img img {
+    position: static;
+  }
+  .Home .Specility .speciality-content {
+    flex-direction: column;
+  }
+  .Home .BookNow {
+    width: calc(100% - 2rem);
+    height: auto;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .Home .BookNow .book_image {
+    display: none;
+  }
+  .All_Doctors_Section_Content {
+    flex-direction: column;
+  }
+  .doctors_cards {
+    align-items: center;
+    justify-content: center;
+  }
+  .doctors_cards .doc_card {
+    width: 95%;
+  }
+  footer .footer_data {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  footer .footer_data .footer_desc {
+    width: 100%;
+  }
+  footer .footer_data .footer_links h1 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .About {
+    padding: 1rem;
+  }
+  .About h1 {
+    margin-bottom: 1rem;
+  }
+  .About .about-contact {
+    flex-direction: column;
+  }
+  .About .whyUs .table {
+    flex-direction: column;
+  }
+  .About .whyUs .table div {
+    padding: 3rem 1rem;
+    letter-spacing: 1px;
+  }
+  .About .whyUs .table div.middle {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ababab;
+    border-top: 1px solid #ababab;
+  }
+  .Contact_Section {
+    padding: 2rem 1rem;
+  }
+  .Contact_Section .contact_content {
+    flex-direction: column;
+  }
+  .Contact_Section .contact_content .contact_img {
+    width: 100%;
+    height: auto;
+  }
+  .Contact_Section .contact_content .contact_info {
+    width: 100%;
+    letter-spacing: 1px;
+  }
+  .Contact_Section .contact_content .contact_info p {
+    font-size: 16px;
+  }
+  .Contact_Section .contact_content .contact_info button {
+    width: 200px;
+  }
+  .auth_form {
+    width: 90%;
+  }
+  .dashboard_layout {
+    flex-direction: column;
+  }
+  .dashboard_layout aside {
+    width: 95%;
+    border-right: none;
+    border-bottom: 1px solid #adadad;
+  }
+  .dashboard_layout .system_details {
+    flex-wrap: wrap;
+  }
+  .dashboard_layout .taple_content .flex-1 {
+    display: none;
+  }
+  .dashboard_layout .input_parent {
+    width: 95% !important;
+  }
 }/*# sourceMappingURL=index.css.map */

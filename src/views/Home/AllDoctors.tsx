@@ -17,7 +17,7 @@ function AllDoctors() {
       <h3 className="section_title py-8 px-4 text-xl capitalize">
         Browse through the doctors specialist.
       </h3>
-      <div className="flex w-full justify-center gap-6">
+      <div className="flex w-full justify-center gap-6 All_Doctors_Section_Content">
         <div className="flex-1 p-4">
           <Specialities setSpecialist={setSpecialist} />
         </div>

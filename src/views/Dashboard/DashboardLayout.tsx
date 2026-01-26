@@ -8,7 +8,7 @@ function Layout() {
     <>
       <NavBar />
       <div
-        className="flex items-center"
+        className="flex items-center dashboard_layout"
         style={{ height: "calc(100vh - 66px)" }}
       >
         <Aside />
